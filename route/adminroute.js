@@ -24,7 +24,7 @@ router.get("/user/:id", auth, isadminAuth, getUser)
 
 router.put("/update/:id", auth, isadminAuth, updateUser)
 
-router.post("/addservices", auth, isadminAuth, upload.single("file"), createServices)
+router.post("/addservices", upload.single("file"), createServices)
 
 router.get("/getservices", auth, isadminAuth, getService)
 
